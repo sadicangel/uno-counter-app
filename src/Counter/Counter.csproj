@@ -25,5 +25,14 @@
       MVUX;
     </UnoFeatures>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <UnoImage Include="Assets\logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <UnoImage Update="Assets\Icons\logo.svg" Link="Assets\logo.svg" />
+  </ItemGroup>
 
 </Project>

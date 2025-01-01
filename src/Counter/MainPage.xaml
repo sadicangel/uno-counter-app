@@ -1,17 +1,16 @@
-﻿<Page x:Class="Counter.MainPage"
+<Page x:Class="Counter.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="using:Counter"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
   <ScrollViewer>
     <Grid>
-      <StackPanel
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
-        <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-          Text="Hello Uno Platform!"
-          HorizontalAlignment="Center" />
-      </StackPanel>
+    <StackPanel VerticalAlignment="Center">
+    <Image Margin="12" HorizontalAlignment="Center" Width="150" Source="Assets/logo.png" />
+    <TextBox Text="{Binding Path=Countable.Step, Mode=TwoWay}" Margin="12" HorizontalAlignment="Center" TextAlignment="Center" PlaceholderText="Step Size" />
+    <TextBlock Margin="12" HorizontalAlignment="Center" TextAlignment="Center" Text="{Binding Path=Countable.Count}"/>
+    <Button Command="{Binding Path=IncrementCounter}" Style="{StaticResource ButtonRevealStyle}" Margin="12" HorizontalAlignment="Center" Content="Increment Counter by Step Size" />
+    </StackPanel>
     </Grid>
   </ScrollViewer>
 </Page>
